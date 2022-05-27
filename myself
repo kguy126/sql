@@ -1,0 +1,10 @@
+SELECT *FROM player where  name ~* login
+;
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+
+SELECT  login,realm,count(*) as visits FROM VISIT 
+
+GROUP BY login, realm HAVING COUNT(*) > 1 ORDER By login,realm
+;
+
+

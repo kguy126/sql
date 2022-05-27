@@ -1,0 +1,30 @@
+
+
+WITH JK AS (select login,day,realm FROM ACTOR
+GROUP BY login,day,realm HAVING COUNT (*)>1
+)
+
+SELECT J.login,p.name,J.day,J.realm, a.theme from Jk as j, player as p, actor as a
+where j.login = p.login and a.realm = j.realm and a.day=j.day and a.login= j.login
+order by j.login,p.name, j.day, j.realm,a.theme
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

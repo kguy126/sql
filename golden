@@ -1,0 +1,13 @@
+SELECT  distinct quest.realm,quest.day,quest.theme FROM quest 
+INNER JOIN LOOT ON quest.realm = loot.realm and quest.day = loot.day and loot.theme = quest.theme
+where treasure  ~* 'Gold' AND login IS NOT NULL 
+
+order by day, realm, theme ;
+
+
+
+
+
+
+
+

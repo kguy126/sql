@@ -1,0 +1,9 @@
+WITH JK AS (SELECT  theme,count(*) as quests FROM QUEST
+WHERE succeeded IS NULL
+GROUP BY theme )
+SELECT theme, count(*) as quests from Quest
+where theme NOT IN (SELECT theme from JK)
+GrouP BY theme
+ORDER By theme
+;
+

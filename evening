@@ -1,0 +1,9 @@
+SELECT  distinct realm,day,theme, succeeded FROM Quest where  succeeded between '20:00:00' and '23:59:59' OR succeeded IS NULL order by day, realm, theme;
+
+
+
+
+
+
+
+
